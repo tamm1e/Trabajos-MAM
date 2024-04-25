@@ -1,0 +1,83 @@
+//código semáforo
+int rojo1=13;
+    int amarillo1=12;
+    int verde1=11;
+	int rojo2=8;
+    int amarillo2=7;
+    int verde2=6;
+    int rojop1=10;
+    int verdep1=9;
+	int rojop2=5;
+	int verdep2=4;
+
+
+void setup()
+{
+ pinMode(rojo1, OUTPUT);
+ pinMode(amarillo1, OUTPUT);
+ pinMode(verde1, OUTPUT);
+ pinMode(rojop1, OUTPUT);
+ pinMode(verdep1, OUTPUT);
+ pinMode(rojo2, OUTPUT);
+ pinMode(amarillo2, OUTPUT);
+ pinMode(verde2, OUTPUT);
+ pinMode(rojop2, OUTPUT);
+ pinMode(verdep2, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);//rojo1
+  digitalWrite(6, HIGH);//verde2
+  digitalWrite(10, HIGH);//rojop1
+  digitalWrite(4, HIGH);//verdep2
+  delay(4550); // Wait for 4550 millisecond(s)
+  digitalWrite(6,LOW);
+  //digitalWrite(4,LOW);
+  delay (350); // Wait for 300 milisecond(s)
+  digitalWrite(7,HIGH);//amarillo2
+  delay(900);// Wait for 900 millisecond(s)
+  digitalWrite(4,HIGH);
+  delay(300);
+  	digitalWrite(4,LOW);
+  delay(300);
+    digitalWrite(4,HIGH);
+  delay(300);
+  digitalWrite(4,LOW);
+  delay(300);
+    digitalWrite(4,HIGH);
+  delay(200);
+  digitalWrite(4,LOW);
+  delay(200);
+  digitalWrite(7,LOW);
+  digitalWrite(13,LOW);
+  digitalWrite(10,LOW);
+  delay(900);// Wait for 900 millisecond(s)
+  
+  digitalWrite(8, HIGH);//rojo2
+  digitalWrite(11, HIGH);//verde1
+  digitalWrite(5, HIGH);//rojop2
+  digitalWrite(9, HIGH);//verdep1
+  delay(4550); // Wait for 4550 millisecond(s)
+  digitalWrite(11,LOW);
+  //digitalWrite(9,LOW);
+  delay (350); // Wait for 300 milisecond(s)
+  digitalWrite(12,HIGH);//amarillo1
+  delay(900);// Wait for 900 millisecond(s)
+    digitalWrite(9,HIGH);
+  delay(300);
+  	digitalWrite(9,LOW);
+  delay(300);
+    digitalWrite(9,HIGH);
+  delay(300);
+  digitalWrite(9,LOW);
+  delay(300);
+    digitalWrite(9,HIGH);
+  delay(200);
+  digitalWrite(9,LOW);
+  delay(200);
+  digitalWrite(12,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(5,LOW);
+  delay(300);// Wait for 900 millisecond(s)
+}
